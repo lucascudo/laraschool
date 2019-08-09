@@ -1,0 +1,32 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: cworks/paas2-php:71
+        name: php
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
+    steps:
+      - checkout
+      - run: cp .env.example .env
+      - run: cp laradock/.env.example laradock/.env
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "composer.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+      - run: composer install -n
+      - save_cache:
+          paths:
+            - ./vendor
+          key: v1-dependencies-{{ checksum "composer.json" }}
+      - run: php artisan key:generate --env=testing
+      - run: php artisan storage:link
+      - run: touch storage/testing.sqlite
+      - run: php artisan migrate:fresh --seed --env=testing --database=sqlite_testing --force
+      - run: php artisan cache:clear
+      - run: php artisan view:clear
+      - run: php artisan config:cache
+      - run: composer test

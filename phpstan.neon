@@ -1,0 +1,8 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+parameters:
+    level: MAX
+    ignoreErrors:
+        - '#should return Illuminate\\Support\\Facades\\Response but returns#'
+        - '#Call to an undefined method (\\?([^\/]*[\/])*)([^\/]+)::concursos\(\)#'
+        - '#Call to an undefined method (\\?([^\/]*[\/])*)([^\/]+)::cursos\(\)#'

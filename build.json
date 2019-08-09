@@ -1,0 +1,20 @@
+{
+	"projectType": "laravel",
+	"directories":[
+		"app",
+		"artisan",
+		"bootstrap",
+		"config",
+		"database",
+		".env.example",
+		"node_modules",
+		"public",
+		"resources",
+		"routes",
+		"storage",
+		"vendor",
+		"scripts/production"
+	],
+	"repository":"git@bitbucket.org:convergenceworks/ebmsp-processo-seletivo-releases.git",
+	"jiraProject": "EBMSPPS"
+}
