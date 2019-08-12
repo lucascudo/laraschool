@@ -16,7 +16,7 @@ class UsersSeeder extends Seeder
         $now = new DateTime();
         $newUser = new User([
             "name" => "Admin",
-            "email" => "admin@cworks.com.br",
+            "email" => "admin@laraschool.com.br",
             "name" => "Admin",
             'password' => Hash::make(config('app.default_password')),
             'created_at' => $now,

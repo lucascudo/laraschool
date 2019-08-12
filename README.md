@@ -56,4 +56,5 @@ docker exec -t laraschool_workspace_1 php artisan backup:run
 
 ## Default Routes
 /log-viewer
+
 /decompose

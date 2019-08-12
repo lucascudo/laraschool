@@ -5,22 +5,23 @@ namespace App\Models;
 use App\Models\AppBaseModel as Model;
 
 /**
- * Class Curso
+ * Class Aluno
  * @package App\Models
- * @version August 6, 2019, 9:15 am -03
+ * @version August 12, 2019, 12:31 pm -03
  *
- * @property string $titulo
+ * @property \Illuminate\Database\Eloquent\Collection $cursos
+ * @property string $nome
  */
-class Curso extends Model
+class Aluno extends Model
 {
-    public $table = 'cursos';
-
+    public $table = 'alunos';
+    
 
     protected $dates = ['deleted_at'];
 
 
     public $fillable = [
-        'titulo',
+        'nome'
     ];
 
     /**
@@ -30,7 +31,7 @@ class Curso extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'titulo' => 'string',
+        'nome' => 'string'
     ];
 
     /**
@@ -39,7 +40,7 @@ class Curso extends Model
      * @var array
      */
     public static $rules = [
-        'titulo' => ['required', 'string', 'max:255'],
+        
     ];
 
     /**
@@ -47,6 +48,6 @@ class Curso extends Model
      **/
     public function cursos()
     {
-        return $this->belongsToMany(\App\Models\Aluno::class, 'alunos_cursos', 'id', 'id');
+        return $this->belongsToMany(\App\Models\Curso::class, 'alunos_cursos', 'id', 'id');
     }
 }

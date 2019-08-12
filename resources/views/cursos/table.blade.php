@@ -3,9 +3,6 @@
         <thead>
             <tr>
                 <th>Título</th>
-                <th>Turno</th>
-                <th>Código da Strix</th>
-                <th>Centro de Custo</th>
                 <th colspan="3">Ações</th>
             </tr>
         </thead>
@@ -13,9 +10,6 @@
             @foreach($cursos as $curso)
             <tr>
                 <td>{!! $curso->titulo !!}</td>
-                <td>{!! $curso->turno !!}</td>
-                <td>{!! $curso->codigo_strix !!}</td>
-                <td>{!! $curso->centro_custo !!}</td>
                 <td>
                     {!! Form::open(['route' => ['cursos.destroy', $curso->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

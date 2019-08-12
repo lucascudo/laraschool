@@ -2,22 +2,22 @@
 
 namespace App\Repositories;
 
-use App\Models\Curso;
+use App\Models\Aluno;
 use App\Repositories\BaseRepository;
 
 /**
- * Class CursoRepository
+ * Class AlunoRepository
  * @package App\Repositories
- * @version August 6, 2019, 9:15 am -03
+ * @version August 12, 2019, 12:31 pm -03
 */
 
-class CursoRepository extends BaseRepository
+class AlunoRepository extends BaseRepository
 {
     /**
      * @var array
      */
     protected $fieldSearchable = [
-        'titulo',
+        'nome'
     ];
 
     /**
@@ -35,6 +35,6 @@ class CursoRepository extends BaseRepository
      **/
     public function model()
     {
-        return Curso::class;
+        return Aluno::class;
     }
 }

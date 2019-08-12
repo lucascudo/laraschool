@@ -42,3 +42,6 @@ Route::post(
 
 Route::resource('cursos', 'CursoController');
 Route::resource('usuarios', 'UsuarioController');
+
+
+Route::resource('alunos', 'AlunoController');
