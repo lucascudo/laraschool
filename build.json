@@ -15,6 +15,6 @@
 		"vendor",
 		"scripts/production"
 	],
-	"repository":"git@bitbucket.org:convergenceworks/ebmsp-processo-seletivo-releases.git",
+	"repository":"git@bitbucket.org:convergenceworks/laraschool-releases.git",
 	"jiraProject": "EBMSPPS"
 }

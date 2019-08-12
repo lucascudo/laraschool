@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Gestão de Processo Seletivo - EBMSP')
+@section('title', 'laraschool')
 
 @section('content_header')
     <h1>Dashboard</h1>

@@ -1,5 +1,5 @@
 # Laraschool
-[![CircleCI](https://circleci.com/bb/convergenceworks/ebmsp-processo-seletivo.svg?style=svg&circle-token=083a81cf7bb695d33b564e4858fdccec7a4b8183)](https://circleci.com/bb/convergenceworks/ebmsp-processo-seletivo)
+[![CircleCI](https://circleci.com/bb/convergenceworks/laraschool.svg?style=svg&circle-token=083a81cf7bb695d33b564e4858fdccec7a4b8183)](https://circleci.com/bb/convergenceworks/laraschool)
 
 
 ## Server Requirements
@@ -44,13 +44,13 @@ sh scripts/install.sh
 ```sh
 rm storage/testing.sqlite -f
 touch storage/testing.sqlite
-docker exec -t ebmspps_workspace_1 composer test
+docker exec -t laraschool_workspace_1 composer test
 ```
 
 
 ## Backing up
 ```sh
-docker exec -t ebmspps_workspace_1 php artisan backup:run
+docker exec -t laraschool_workspace_1 php artisan backup:run
 ```
 
 

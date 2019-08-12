@@ -11,7 +11,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "docker exec -t ebmspps_workspace_1 composer test"
+            "pre-commit": "docker exec -t laraschool_workspace_1 composer test"
         }
     },
     "devDependencies": {
