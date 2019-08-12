@@ -1,5 +1,5 @@
 # Laraschool
-[![CircleCI](https://circleci.com/gh/lucascudo/laravel-pt-BR-localization.svg?style=svg)](https://circleci.com/gh/lucascudo/laravel-pt-BR-localization)
+[![CircleCI](https://circleci.com/gh/lucascudo/laraschool.svg?style=svg)](https://circleci.com/gh/lucascudo/laraschool)
 
 
 ## Server Requirements
